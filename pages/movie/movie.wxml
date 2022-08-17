@@ -8,7 +8,7 @@
 	</view>
 </view>
 <!--滑动导航栏-->
-<!-- 使用swiper组件实现华东页面效果 -->
+<!-- 使用swiper组件实现滑动页面效果 -->
 <swiper current="{{currentIndex}}" style="height: {{winHeight}}rpx;">
 	<swiper-item>
 		<!-- 热映电影列表 -->
