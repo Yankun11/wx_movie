@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/movie/movie",
+    "pages/cinema/cinema",
+    "pages/my/my",
+    "pages/movieDetail/movieDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "看看电影",
+    "navigationBarTextStyle":"white"
+	},
+	"tabBar": {
+		"selectedColor": "#f00",
+		"list": [
+			{
+				"pagePath": "pages/movie/movie",
+				"text": "电影",
+				"iconPath": "./png/01.png",
+				"selectedIconPath": "./png/02.png"
+			},
+			{
+				"pagePath": "pages/cinema/cinema",
+				"text": "影院",
+				"iconPath": "./png/03.png",
+				"selectedIconPath": "./png/04.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "./png/06.png",
+				"selectedIconPath": "./png/05.png"
+			}
+		]
+	},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

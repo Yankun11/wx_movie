@@ -1,0 +1,34 @@
+<!--顶部导航栏-->
+<view class="nav">
+	<view id="0" class="{{currentIndex==0?'selected':'normal'}}" bindtap="changeCurrentIndex">
+		<view>热映</view>
+	</view>
+	<view id="1" class="{{currentIndex==1?'selected':'normal'}}" bindtap="changeCurrentIndex">
+		<view>待映</view>
+	</view>
+</view>
+<!--滑动导航栏-->
+<!-- 使用swiper组件实现华东页面效果 -->
+<swiper current="{{currentIndex}}" style="height: {{winHeight}}rpx;">
+	<swiper-item>
+		<!-- 热映电影列表 -->
+		<view wx:for="{{hotMovie}}" wx:key="item" class="hotMovie" id="{{item.id}}" bindtap="movieDetail">
+			<view>
+				<image src="{{item.img}}" style="width: 200rpx;height: 300rpx;"></image>
+			</view>
+			<view class="text" style="width: 400rpx;">
+				<view>《{{item.nm}}》</view>
+				<view>主演：{{item.star}}</view>
+				<view>{{item.showInfo}}</view>
+			</view>
+			<view style="color: red;">{{item.sc}}分</view>
+		</view>
+	</swiper-item>
+
+	<swiper-item>
+		<!-- 待映电影列表 -->
+		<view>电影1</view>
+		<view>电影2</view>
+		<view>电影3</view>
+	</swiper-item>
+</swiper>
