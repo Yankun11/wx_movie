@@ -1,2 +1,2 @@
 <!--pages/movieDetail/movieDetail.wxml-->
-<text>pages/movieDetail/movieDetail.wxml</text>
+<view>电影ID：{{id}}</view>

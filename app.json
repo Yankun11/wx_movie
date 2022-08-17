@@ -3,6 +3,7 @@
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/my/my",
+    "pages/login/login",
     "pages/movieDetail/movieDetail"
   ],
   "window":{

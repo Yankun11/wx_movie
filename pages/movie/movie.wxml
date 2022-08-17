@@ -27,8 +27,16 @@
 
 	<swiper-item>
 		<!-- 待映电影列表 -->
-		<view>电影1</view>
-		<view>电影2</view>
-		<view>电影3</view>
+		<scroll-view scroll-x="true">
+			<view style="display: flex;">
+				<view wx:for="{{hotMovie}}" wx:key="item" style="width: 200rpx;" id="{{item.id}}" bindtap="movieDetail">
+					<view style="width: 190rpx;">
+						<image src="{{item.img}}" style="width: 150rpx;height: 200rpx;"></image>
+						<view>{{item.nm}}</view>
+						<view style="font-size: 20rpx;">{{item.rt}}</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
 	</swiper-item>
 </swiper>

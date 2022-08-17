@@ -5,6 +5,11 @@ Page({
 		winHeight:500,
 		hotMovie:[{nm:'abc',id:'11'},{nm:'xvz',id:'22'}]
 	},
+	movieDetail(e){
+		wx.navigateTo({
+			url: '/pages/movieDetail/movieDetail?id=' + e.currentTarget.id,
+		})
+	},
 	changeCurrentIndex(e){
 		this.setData({
 			currentIndex:e.currentTarget.id
