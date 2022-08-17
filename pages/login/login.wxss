@@ -1,1 +1,29 @@
 /* pages/login/login.wxss */
+.content{
+	margin-top: 80rpx;
+}
+.username{
+	display: flex;
+	flex-direction: row;
+	padding: 40rpx 0 20rpx 40rpx;
+}
+.title{
+	width: 150rpx;
+	font-weight: hold;
+}
+.hr{
+	border: 2px solid #cccccc;
+	width: 90%;
+	margin: 0 auto;
+	opacity: 0.1;
+}
+.register{
+	display: flex;
+	flex-direction: row;
+}
+.register view{
+	margin: 0 auto;
+	margin-top: 80rpx;
+	font-size: 30rpx;
+	color: #333;
+}

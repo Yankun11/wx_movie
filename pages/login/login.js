@@ -1,66 +1,74 @@
 // pages/login/login.js
 Page({
-
-	/**
-	 * 页面的初始数据
-	 */
 	data: {
-
+		loginBtnState:true,  //控制登录按钮是否可用
+		username:"",
+		password:""
 	},
-
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad(options) {
-
+	// 用户名输入框事件
+	usernameInput:function(e){
+		console.log(e);
+		var val = e.detail.value;
+		if (val != '') {
+			this.setData({
+				username:val
+			});
+			if (this.data.password != '') {
+				this.setData({
+					loginBtnState:false,
+				})
+			}
+		}else{
+			this.setData({
+				loginBtnState:true,
+			})
+		}
 	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady() {
-
+	// 密码输入框事件
+	passwordInput:function(e){
+		var val = e.detail.value;
+		if (val != '') {
+			this.setData({
+				password:val
+			});
+			if (this.data.username != '') {
+				this.setData({
+					loginBtnState:false,
+				})
+			}
+		}else{
+			this.setData({
+				loginBtnState:true,
+			})
+		}
 	},
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow() {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide() {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload() {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh() {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom() {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage() {
-
+	// 登录按钮事件
+	login:function(){
+		var userInfs = wx.getStorageSync('userobjs') || [];
+		var userInf = userInfs.find(item=>item.username == this.data.username)
+		if (userInf) {
+			if (userInf.password == this.data.password) {
+				wx.showToast({
+					title:"登录成功",
+					duration: 2000,
+					success:function(){
+						wx.navigateTo({
+							url:'../my/my'
+						})
+					}
+				})
+			}else{
+				wx.showToast({
+					title: '密码错误',
+					duration: 2000,
+				})
+			}
+		}else{
+			wx.showToast({
+				title: '用户名不存在',
+				duration: 2000,
+			})
+		}
 	}
+	
 })

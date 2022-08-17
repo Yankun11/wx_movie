@@ -4,6 +4,7 @@
     "pages/cinema/cinema",
     "pages/my/my",
     "pages/login/login",
+    "pages/iphone/iphone",
     "pages/movieDetail/movieDetail"
   ],
   "window":{
@@ -28,7 +29,7 @@
 				"selectedIconPath": "./png/04.png"
 			},
 			{
-				"pagePath": "pages/my/my",
+				"pagePath": "pages/login/login",
 				"text": "我的",
 				"iconPath": "./png/06.png",
 				"selectedIconPath": "./png/05.png"

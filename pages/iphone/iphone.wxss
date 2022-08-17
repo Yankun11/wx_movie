@@ -1,0 +1,57 @@
+/* pages/iphone/iphone.wxss */
+form{
+	width: 100%;
+	background-color: #f2f2f2;
+}
+.hr{
+	border: 2rpx solid #ccc;
+	width: 90%;
+	margin: 0 auto;
+	opacity: 0.1;
+}
+.item{
+	border: 2rpx solid #ccc;
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 10rpx;
+	margin-bottom: 30rpx;
+}
+.item input{
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 35rpx;
+	color: #999;
+}
+.iphoneUserInfo{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30rpx;
+}
+.code{
+	margin: 0 auto;
+	border: 2rpx solid #ccc;
+	width: 50%;
+	height: 80rpx;
+	line-height: 80rpx;
+	border-radius: 10rpx;
+	text-align: center;
+}
+.registerBtn{
+	margin-bottom: 30rpx;
+
+}
+.protocol{
+	margin-top: 30rpx;
+	margin-left: 30rpx;
+}
+.agree{
+	font-size: 30rpx;
+	margin-left: 10rpx;
+	color: #666;
+}
+.options{
+	font-size: 30rpx;
+	font-weight: bold;
+}
