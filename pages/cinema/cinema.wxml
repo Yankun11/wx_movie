@@ -1,2 +1,14 @@
 <!--pages/cinema/cinema.wxml-->
-<text>pages/cinema/cinema.wxml</text>
+<view class="bg">
+	<view class="nav">
+	<scroll-view class="scrollview" scroll-x="true">
+		<view class="bg">
+			<block wx:for="{{scrollViewTitle}}" wx:key="item">
+				<view>
+					<view class="{{currentIndex == index?'selected':'normal'}}" id="{{index}}" bindtap="changeCurrentIndex">{{item}}</view>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+	</view>
+</view>
