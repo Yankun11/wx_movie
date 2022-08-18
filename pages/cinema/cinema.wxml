@@ -1,4 +1,4 @@
-<!--pages/cinema/cinema.wxml-->
+<!--顶部滑动导航-->
 <view class="bg">
 	<view class="nav">
 	<scroll-view class="scrollview" scroll-x="true">
@@ -12,3 +12,29 @@
 		</scroll-view>
 	</view>
 </view>
+<!--顶部导航对应的内容-->
+<swiper current="{{currentIndex}}" style="height: {{winHeight}}rpx">
+	<swiper-item>
+		<scroll-view scroll-y="true" style="height:{{winHeight -50}}rpx">
+			<include src="vip.wxml"></include>
+		</scroll-view>
+	</swiper-item>
+	<swiper-item>
+		<include src="viedo.wxml"></include>
+	</swiper-item>
+	<swiper-item>
+		<include src="image.wxml"></include>
+	</swiper-item>
+	<swiper-item>
+		<view>趣事</view>
+	</swiper-item>
+	<swiper-item>
+		<view>精华</view>
+	</swiper-item>
+	<swiper-item>
+		<view>穿越</view>
+	</swiper-item>
+	<swiper-item>
+		<view>爆料</view>
+	</swiper-item>
+</swiper>

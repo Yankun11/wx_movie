@@ -1,0 +1,21 @@
+<block wx:for="{{vipArray}}" wx:key="item">
+		<block>
+		<view class="hr"></view>
+		<view>
+			{{item.id}}
+		</view>
+		<view class="head">
+			<view>
+				<image src="{{item.user.medium}}" style="height: 100rpx;width: 100rpx;"></image>
+			</view>
+		</view>
+		<view class="title">
+			<view>{{item.user.login}}</view>
+		</view>
+		<view class="content">
+			<view>{{item.content}}</view>
+		</view>
+		<view class="votes">赞:{{item.votes.up}} / 踩:{{item.votes.down}} / 评论数：{{item.commets_count}} // 转发数：{{item.share_count}}</view>
+
+	</block>
+</block>

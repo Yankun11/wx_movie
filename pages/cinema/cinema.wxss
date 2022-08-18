@@ -27,3 +27,8 @@
 	color: #000;
 	border-bottom: none;
 }
+.hr{
+	width: 100%;
+	height: 10rpx;
+	border-color: #ccc;
+}

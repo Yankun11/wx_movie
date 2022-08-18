@@ -24,7 +24,7 @@
 			},
 			{
 				"pagePath": "pages/cinema/cinema",
-				"text": "影院",
+				"text": "频道",
 				"iconPath": "./png/03.png",
 				"selectedIconPath": "./png/04.png"
 			},
