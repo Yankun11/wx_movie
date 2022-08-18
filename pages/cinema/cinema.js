@@ -5,7 +5,8 @@ Page({
 			'Vip专享','视频','图片','趣事','精华','穿越','爆料'
 		],
 		currentIndex:0,
-		winHeight:110,
+		winHeight:100,
+		vipTotalPages:3,
 		vipPages:1,
 		vipArray:[],
 		videoArray:[],
@@ -34,7 +35,7 @@ Page({
 				wx.getSystemInfo({
 					success: (result) => {
 						this.setData({
-							winHeight:result.windowHeight * vipArr.length / 2
+							winHeight:result.windowHeight * vipArr.length / 1.5
 						})
 					},
 				});
@@ -51,13 +52,31 @@ Page({
 	// 上拉触顶事件
 	onReachBottom(){
 		if (this.data.currentIndex == 0) { //vip
-			this.loadVip(this.data.vipPages + 1);
+			if (this.data.vipPages > this.data.vipTotalPages) {
+				wx.showToast({
+					title: '已经到底了哦',
+				})
+			}else{
+				this.loadVip(this.data.vipPages + 1);
+			}
 		}
 		if (this.data.currentIndex == 1) { //视频
 			
 		}
 		if (this.data.currentIndex == 2) { //图片
 			
+		}
+	},
+	onShareAppMessage(){
+		return{
+			title:"123"
+		}
+	},
+	onShareTimeline(){
+		return{
+			title:"aaaa",
+			path:"/pages/cinema/cinema",
+			desc:"xxxxx"
 		}
 	}
 })
