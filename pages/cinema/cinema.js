@@ -7,7 +7,9 @@ Page({
 		currentIndex:0,
 		winHeight:110,
 		vipPages:1,
-		vipArray:[]
+		vipArray:[],
+		videoArray:[],
+		imageArray:[]
 	},
 	changeCurrentIndex(e){
 		this.setData({
@@ -41,5 +43,21 @@ Page({
 				})
 			}
 		});
+	},
+	// 下拉刷新事件
+	onPullDownRefresh(){
+		this.loadVip(this.data.vipPages);
+	},
+	// 上拉触顶事件
+	onReachBottom(){
+		if (this.data.currentIndex == 0) { //vip
+			this.loadVip(this.data.vipPages + 1);
+		}
+		if (this.data.currentIndex == 1) { //视频
+			
+		}
+		if (this.data.currentIndex == 2) { //图片
+			
+		}
 	}
 })
